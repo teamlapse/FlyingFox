@@ -33,7 +33,6 @@ let package = Package(
         ),
         .target(
             name: "FlyingSocks",
-            dependencies: [.target(name: "CSystemLinux", condition: .when(platforms: [.linux]))],
             path: "FlyingSocks/Sources"
         ),
         .testTarget(
@@ -43,10 +42,6 @@ let package = Package(
             resources: [
                 .copy("Resources")
             ]
-        ),
-        .target(
-             name: "CSystemLinux",
-             path: "CSystemLinux"
         )
     ]
 )
